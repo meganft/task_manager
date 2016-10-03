@@ -1,6 +1,13 @@
-<h1>All Tasks</h1>
+<div class="page-header" align="center">
+<h1>All Tasks. <small>Select your favorite!</small></h1>
+</div>
 
+<div class="jumbotron">
 <% @tasks.each do |task| %>
-  <h3><a href="/tasks/<%= task.id %>"><%= task.title %></a></h3>
-    <p><%= task.description %></p>
+  <h3 align="left"><a href="/tasks/<%= task.id %>" <button type = 'button' class="btn btn-success"><%= task.title %></a></h3>
+    <p align="left"><%= task.description %></p>
 <% end %>
+</div>
+<div class="panel panel-success">
+  <div class="panel-footer panel-default" align="center">meg's task manager.</div>
+</div>
