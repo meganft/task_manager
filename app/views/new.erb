@@ -1,7 +1,15 @@
 
 <form align="center" action="/tasks" method="post">
   <p>Enter a new task:</p>
-  <input style="border: 1px solid; border-radius: 4px;" type='text' name='task[title]'/><br/>
-  <textarea style="border: 1px solid; border-radius: 4px;" name='task[description]'></textarea><br/>
-  <input type='submit'/>
+  <table align="center">
+    <tr>
+      <td>Task: </td> <td><input style="border: 1px solid; border-radius: 3px; padding-left:10px" type='text' name='task[title]'/> </td><br/>
+    </tr>
+    <tr>
+      <td> Instructions:</td> <td><textarea style="border: 1px solid; border-radius: 3px;" name='task[description]'></textarea></td><br/>
+    </tr>
+    <tr> <td>
+  <input colspan="2" type='submit'/> </td>
+</tr>
+</table>
 </form>
