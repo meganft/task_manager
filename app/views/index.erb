@@ -2,12 +2,19 @@
 <h1>All Tasks. <small>Select your favorite!</small></h1>
 </div>
 
-<div class="jumbotron">
+<div class="jumbotron" align="center" background-image= "url(https://unsplash.com/?photo=rL6sOvctpo4)">
+  <ol>
 <% @tasks.each do |task| %>
-  <h3 align="left"><a href="/tasks/<%= task.id %>" <button type = 'button' class="btn btn-success"><%= task.title %></a></h3>
-    <p align="left"><%= task.description %></p>
+  <h3 ><a href="/tasks/<%= task.id %>"><%= task.title %></a></h3>
+    <p><%= task.description %></p>
+    <a href="/tasks/<%= task.id %>/edit" class="btn btn-info">Edit</a>
+    <form action="/tasks/<%= task.id %>" method="POST">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" class="btn btn-danger" value="Delete"/>
+    </form>
 <% end %>
+</ol>
 </div>
 <div class="panel panel-success">
-  <div class="panel-footer panel-default" align="center">meg's task manager.</div>
+  <div class="panel-footer panel-default" align="center">task manager</div>
 </div>
